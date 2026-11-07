@@ -5,7 +5,7 @@
 
 ## 1. Problemin Açıklaması
 <!-- Problemi kendi cümlelerinizle yazın. -->
-Kat sorma
+Kat sorma sı
 
 ## 2. Girdi - İşlem - Çıktı
 
