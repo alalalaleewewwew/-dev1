@@ -1,0 +1,113 @@
+# Rapor
+
+**Ad Soyad:**
+**Numara:**
+
+## 1. Problemin Açıklaması
+<!-- Problemi kendi cümlelerinizle yazın. -->
+Kullanıcıya bulunduğu katı ve gitmek istediği katı sorduktan sonra yaptığı şeyleri yazar
+
+## 2. Girdi - İşlem - Çıktı
+
+**Girdiler:**
+-
+bulunuduğu,kat
+**İşlemler:**
+- bulunduğu - kat
+kat == bulunduğu
+kat - bulunduğu
+kat>bulunduğu
+bulunduğu>kat
+
+**Çıktılar:**
+-
+
+## 3. Sözde Kod (Pseudocode)
+
+```
+1.BASLA
+
+    YAZDIR "1 den 10 a kadar olan katlardan hangisindesiniz"
+    OKU bulunan
+
+    YAZDIR "1 den 10 a kadar olan katlardan hangisine gitmek istersiniz"
+    OKU kat
+
+    EĞER (kat > 10 VEYA kat < 1) VEYA (bulunan > 10 VEYA bulunan < 1) İSE
+        YAZDIR "girdiginiz kat gecersiz"
+    DEĞİLSE
+        EĞER bulunan > kat İSE
+            YAZDIR (bulunan - kat) + " kat asagi iniyor"
+        DEĞİLSE EĞER kat == bulunan İSE
+            YAZDIR "kat aynıdır"
+        DEĞİLSE
+            YAZDIR (kat - bulunan) + " kat yukarı çıkıyor"
+        BİTİR_EĞER
+    BİTİR_EĞER
+
+BİTİR
+2.
+3.
+```
+
+## 4. Akış Şeması
+
+[ BAŞLA ]
+    │
+    ▼
+[ 1. Kullanıcıdan mevcut katı al (bulunan) ]
+    │
+    ▼
+[ 2. Kullanıcıdan gitmek istenen katı al (kat) ]
+    │
+    ▼
+[ 3. Katlar 1 ile 10 arasında mı? ]
+    ├── (Hayır: kat > 10 veya kat < 1 veya bulunan > 10 veya bulunan < 1)
+    │     │
+    │     ▼
+    │   [ "girdiginiz kat gecersiz" yazdır ]
+    │     │
+    │     └──────────────────┐
+    │                        │
+    └── (Evet)               │
+          │                  │
+          ▼                  │
+    [ 4. bulunan > kat mi? ] │
+          ├── (Evet)         │
+          │     │            │
+          │     ▼            │
+          │   [ (bulunan - kat) + " kat asagi iniyor" yazdır ]
+          │     │            │
+          │     └──────┐     │
+          │            │     │
+          └── (Hayır)  │     │
+                │      │     │
+                ▼      │     │
+          [ 5. kat == bulunan mi? ]
+                ├── (Evet) ──► [ "kat aynıdır" yazdır ]
+                │      │     │
+                └── (Hayır)  │
+                       │     │
+                       ▼     │
+                 [ (kat - bulunan) + " kat yukarı çıkıyor" yazdır ]
+                       │     │
+                       └─────┴─────┐
+                                   │
+                                   ▼
+                              [ BİTİR ]
+## 5. Test Sonuçları
+doğru
+| Mevcut kat | Hedef kat | Beklenen sonuç | Programın sonucu | Doğru mu? |
+|---|---|---|---|---|
+| 3 | 8 | 5 kat yukarı | | |
+| 9 | 2 | 7 kat aşağı | | |
+| 5 | 5 | Hareket yok | | |
+| 1 | 10 | 9 kat yukarı | | |
+| 10 | 1 | 9 kat aşağı | | |
+| 0 | 5 | Geçersiz mevcut kat | | |
+| 5 | 11 | Geçersiz hedef kat | | |
+| -2 | 4 | Geçersiz mevcut kat | | |
+
+## 6. Ekstra Görev (Opsiyonel)
+<!-- 3 -> 8 için geçilen katların çıktısını buraya yapıştırın. -->
+
